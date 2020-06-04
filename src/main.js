@@ -1,8 +1,18 @@
-import Vue from 'vue'
-import App from './App.vue'
+import * as components from './components'
+import { use } from './utils/plugins';
 
-Vue.config.productionTip = false
+const HkInterface = {
+    install(Vue) {
+        // Components
+        for (let componentKey in components) {
+            Vue.use(components[componentKey])
+        }        
+    }
+}
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+use(HkInterface)
+
+export default HkInterface
+
+// export all components as vue plugin
+export * from './components'
