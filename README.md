@@ -1,24 +1,15 @@
-# hvue-interface
+# Herokey Interface
 
-## Project setup
-```
-yarn install
-```
+### Generate new library version
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+```bash
+$ yarn build-lib
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### Test Single Component
 
-### Lints and fixes files
+```bash 
+$ vue serve [component_path]
 ```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Where [component_path] is a path to your component
+e.g `vue serve src/components/Banner.vue`
